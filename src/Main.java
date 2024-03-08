@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,9 +23,28 @@ public class Main {
             System.out.println((i + 1) + ". " + movie.displayMovieInfo());
         }
         System.out.println("-----------------------------------------------------");
-
-
-
+        System.out.println("Type 1/2/3/4 to watch movie: ");
+        int movieChoice;
+        Scanner input = new Scanner(System.in);
+        movieChoice = input.nextInt();
+        do {
+            switch(movieChoice) {
+                case 1 :
+                    System.out.println("You have chosen ("+bashundhara.getMovies().get(0).getMovieName()+")");
+                    break;
+                case 2 :
+                    System.out.println("You have chosen ("+bashundhara.getMovies().get(1).getMovieName()+")");
+                    break;
+                case 3 :
+                    System.out.println("You have chosen ("+bashundhara.getMovies().get(2).getMovieName()+")");
+                    break;
+                case 4 :
+                    System.out.println("You have chosen ("+bashundhara.getMovies().get(3).getMovieName()+")");
+                    break;
+                default:
+                    System.out.println("Invalid Choice. Please try again.");
+            }
+        } while(movieChoice>1 && movieChoice<4);
 
     }
 }
