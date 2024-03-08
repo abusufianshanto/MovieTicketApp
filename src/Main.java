@@ -7,9 +7,11 @@ public class Main {
         Movie movie1 = new Movie("Hall of Fame", "Abu Sufian Shanto");
         Movie movie2 = new Movie("Inception", "Cristopher Nolan");
         Movie movie3 = new Movie("SpiderMan", "Faiaus Ahsan Arby");
+        Movie movie4 = new Movie("Batman", "Alvina Akther Badhon");
         bashundhara.addMovie(movie1);
         bashundhara.addMovie(movie2);
         bashundhara.addMovie(movie3);
+        bashundhara.addMovie(movie4);
 
         bashundhara.welcomeMsg();
         System.out.println("Right now in our hall these are running: ");
