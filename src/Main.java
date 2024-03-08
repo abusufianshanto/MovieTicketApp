@@ -26,8 +26,9 @@ public class Main {
         System.out.println("Type 1/2/3/4 to watch movie: ");
         int movieChoice;
         Scanner input = new Scanner(System.in);
-        movieChoice = input.nextInt();
+//        movieChoice = input.nextInt();
         do {
+            movieChoice = input.nextInt();
             switch(movieChoice) {
                 case 1 :
                     System.out.println("You have chosen ("+bashundhara.getMovies().get(0).getMovieName()+")");
@@ -44,7 +45,9 @@ public class Main {
                 default:
                     System.out.println("Invalid Choice. Please try again.");
             }
-        } while(movieChoice>1 && movieChoice<4);
+        } while(movieChoice<1 || movieChoice>4);
+        Ticket ticket = new Ticket();
+        System.out.println("Thank you for your purchase. Your ticket number is "+ticket.getTicketNumber());
 
     }
 }
